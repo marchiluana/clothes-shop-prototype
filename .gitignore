@@ -1,0 +1,72 @@
+# Unity generated
+[Tt]emp/
+[Ll]ibrary/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serdata/
+[Ii]mport/
+[Ss]creenshots/
+[Dd]eckar*[Dd]atabase/
+[Oo]pen[Uu]nity[Cc]ollab/
+[Vv]ersions/
+[Aa]ssets/AssetStoreTools*
+
+# Visual Studio files
+.vscode/
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.csproj
+*.pidb.meta
+.suo
+.sln.docstates
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folders
+.vscode/
+
+# Rider
+.idea/
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+.idea/
