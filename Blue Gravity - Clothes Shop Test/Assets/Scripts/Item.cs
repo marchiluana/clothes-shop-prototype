@@ -7,6 +7,7 @@ public class Item : ScriptableObject
     [SerializeField] private Sprite icon;
     [SerializeField] private string itemName;
     [SerializeField] private string itemValue;
+    [SerializeField] private ItemType itemType;
 
     public Sprite Icon
     {
@@ -28,5 +29,11 @@ public class Item : ScriptableObject
         get { return charItem; }
     }
 
+    public ItemType Type { get { return itemType; } }
 
+    public enum ItemType
+    {
+        Clothing,
+        Hat
+    }
 }

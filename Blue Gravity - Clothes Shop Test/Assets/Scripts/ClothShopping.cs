@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Cloth_Shopping : MonoBehaviour
+public class ClothShopping : MonoBehaviour
 {
     [SerializeField] private GameObject ShoppingPanel;
     private void OnMouseDown()

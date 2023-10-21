@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 8a93745fe19865c40902a519500f5c79, type: 3}
   itemName: Silver Armor
   itemValue: 150
+  itemType: 0

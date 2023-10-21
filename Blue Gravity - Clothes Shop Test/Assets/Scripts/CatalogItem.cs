@@ -7,7 +7,6 @@ public class CatalogItem : MonoBehaviour
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI valueText;
-
     public void Setup(Item itemData)
     {
         icon.sprite = itemData.Icon;

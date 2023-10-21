@@ -16,3 +16,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 7cc8b23b223800f41838aba5b1159218, type: 3}
   itemName: Blond Hair
   itemValue: 50
+  itemType: 1

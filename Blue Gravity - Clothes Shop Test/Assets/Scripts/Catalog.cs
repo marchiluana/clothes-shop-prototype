@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Catalog : MonoBehaviour
 {
-    public GameObject itemPrefab;
-    public Transform catalogGrid;
-    public Item[] items;
+    [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private Transform catalogGrid;
+    [SerializeField] private Item[] items;
+    [SerializeField] private FittingRoom fittingRoom;
 
     private void Start()
     {
@@ -13,8 +15,11 @@ public class Catalog : MonoBehaviour
             GameObject newItem = Instantiate(itemPrefab, catalogGrid);
 
             CatalogItem catalogItem = newItem.GetComponent<CatalogItem>();
+            Button button = newItem.GetComponent<Button>();
 
             catalogItem.Setup(itemData);
+
+            button.onClick.AddListener(() => fittingRoom.TryOutfit(itemData));
         }
     }
 }
