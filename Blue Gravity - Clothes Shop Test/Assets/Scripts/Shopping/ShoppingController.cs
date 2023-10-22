@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ShoppingController : MonoBehaviour
 {
+    #region variables
     [SerializeField] private MainCharacter character;
 
     [Header("Hat Section")]
@@ -35,18 +36,9 @@ public class ShoppingController : MonoBehaviour
     private Button lastSelectedHat;
     private Button lastSelectedClothing;
 
+    #endregion
 
-    private void OnEnable()
-    {
-        buyButton.onClick.AddListener(BuyItens);
-        sellButton.onClick.AddListener(SellItens);
-    }
-
-    private void Update()
-    {
-        buyButton.interactable = totalValue > 0;
-        sellButton.interactable = ownedOutiftValue > 0;
-    }
+    #region public methods
     public void TryOutfit(Item item, Button itemButton)
     {
         switch (item.Type)
@@ -67,6 +59,20 @@ public class ShoppingController : MonoBehaviour
 
         totalValue = newClothingValue + newHatValue;
         shoppingCartValue.text = totalValue.ToString();
+    }
+    #endregion
+
+    #region private methods
+    private void OnEnable()
+    {
+        buyButton.onClick.AddListener(BuyItens);
+        sellButton.onClick.AddListener(SellItens);
+    }
+
+    private void Update()
+    {
+        buyButton.interactable = totalValue > 0;
+        sellButton.interactable = ownedOutiftValue > 0;
     }
     private void SetSelectedItem(ref Button lastSelected, Item item, Button itemButton, Image sprite, Image icon)
     {
@@ -94,11 +100,12 @@ public class ShoppingController : MonoBehaviour
         playerCoin -= totalValue;
         ownedOutiftValue = totalValue;
 
-        totalValue = 0;
-
-        playerCoinText.text = playerCoin.ToString();
-        shoppingCartValue.text = totalValue.ToString();
         ownedOutiftValueText.text = ownedOutiftValue.ToString();
+        playerCoinText.text = playerCoin.ToString();
+
+        totalValue = 0;
+        shoppingCartValue.text = totalValue.ToString();
+
 
     }
 
@@ -127,4 +134,6 @@ public class ShoppingController : MonoBehaviour
         clothingIcon.enabled = false;
 
     }
+    #endregion
+
 }
