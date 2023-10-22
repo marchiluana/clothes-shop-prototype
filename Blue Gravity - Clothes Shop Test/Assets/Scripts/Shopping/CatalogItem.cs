@@ -11,6 +11,6 @@ public class CatalogItem : MonoBehaviour
     {
         icon.sprite = itemData.Icon;
         nameText.text = itemData.ItemName;
-        valueText.text = itemData.ItemValue;
+        valueText.text = itemData.ItemValue.ToString();
     }
 }

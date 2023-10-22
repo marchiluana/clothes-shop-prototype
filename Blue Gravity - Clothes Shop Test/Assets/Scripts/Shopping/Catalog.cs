@@ -6,7 +6,7 @@ public class Catalog : MonoBehaviour
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform catalogGrid;
     [SerializeField] private Item[] items;
-    [SerializeField] private FittingRoom fittingRoom;
+    [SerializeField] private ShoppingController shoppingController;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class Catalog : MonoBehaviour
 
             catalogItem.Setup(itemData);
 
-            button.onClick.AddListener(() => fittingRoom.TryOutfit(itemData));
+            button.onClick.AddListener(() => shoppingController.TryOutfit(itemData, button));
         }
     }
 }
