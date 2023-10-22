@@ -7,6 +7,7 @@ public class Item : ScriptableObject
     [SerializeField] private Sprite icon;
     [SerializeField] private string itemName;
     [SerializeField] private string itemValue;
+    [SerializeField] private RuntimeAnimatorController animatorController;
     [SerializeField] private ItemType itemType;
 
     public Sprite Icon
@@ -28,6 +29,10 @@ public class Item : ScriptableObject
     {
         get { return charItem; }
     }
+    public RuntimeAnimatorController AnimatorController
+    {
+        get { return animatorController; }
+    }
 
     public ItemType Type { get { return itemType; } }
 
@@ -36,4 +41,5 @@ public class Item : ScriptableObject
         Clothing,
         Hat
     }
+
 }

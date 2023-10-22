@@ -6,7 +6,11 @@ public class MainCharacter : MonoBehaviour
     [Header("Character Movement")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rb;
+
     private Vector2 movement;
+
+    [Header("Character Animation")]
+    [SerializeField] private Animator[] animators;
 
     [Header("Character Acessories")]
     [SerializeField] private SpriteRenderer hatSprite;
@@ -31,23 +35,47 @@ public class MainCharacter : MonoBehaviour
     #endregion
 
     #region public methods
-    public void Update()
-    {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-    }
+    #endregion
 
-    public void FixedUpdate()
+    #region private methods
+
+    private void Update()
+    {
+        CharacterMovement();
+    }
+    private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         rb.velocity = Vector2.zero;
-
     }
 
+    private void CharacterMovement()
+    {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        movement = new Vector2(horizontalInput, verticalInput);
+
+        foreach (Animator anim in animators)
+        {
+            if (movement != Vector2.zero)
+            {
+                anim.SetTrigger("Moving");
+                anim.SetFloat("Horizontal", movement.x);
+                anim.SetFloat("Vertical", movement.y);
+            }
+            else
+            {
+                anim.SetTrigger("Idle");
+            }
+        }
+
+    }
     #endregion
 
 }

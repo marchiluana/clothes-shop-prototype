@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4a93d7ea580ba47a73c511dd2b061d, type: 3}
+  m_Name: GoldenArmor
+  m_EditorClassIdentifier: 
+  charItem: {fileID: -1271113299, guid: 8dd2b18fbb5fc5a4ab6688486d61838d, type: 3}
+  icon: {fileID: 21300000, guid: 04c267a3edf6c0349ab9e3b43e4e6ce7, type: 3}
+  itemName: Golden Armor
+  itemValue: 100
+  animatorController: {fileID: 22100000, guid: 9358bdc237c0e074fb1f247774c58b45, type: 2}
+  itemType: 0
